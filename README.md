@@ -139,13 +139,60 @@ As everyone know that the `calc` property of CSS3 is a great property. We can us
 
 ### Use CSS's BFC to clear float
 
+To clear float, we can use the property of BFC.
+
+As you know, when calculating the height of a BFC, floated element's height will be included.
+
+```css
+.container {
+    width: 800px;
+    padding: 20px;
+    border: 1px solid #aaaaaa;
+    overflow: hidden; // or set to auto
+}
+```
+
 ### Use CSS to set the width of a div equal to the image
 
+If we want to add an image inside a div, we just write img tag inside a div tag.
+
+However, there is a problem that there is some space between the div's border and the image's border.
+
+So, how to deal with it? The solution is easy:
+
+```css
+.container {
+    font-size: 0; // yes, just use this expression
+}
+```
+
 ### Use CSS to preload images
+
+```css
+#preload-01 { background: url(http://domain.tld/image-01.png) no-repeat -9999px -9999px; }
+#preload-02 { background: url(http://domain.tld/image-02.png) no-repeat -9999px -9999px; }
+#preload-03 { background: url(http://domain.tld/image-03.png) no-repeat -9999px -9999px; }
+```
 
 ### Use CSS to avoid blink
 
 ### Use CSS to make style broken images
+
+Make broken images more aesthetically-pleasing with a little bit of CSS:
+
+```css
+img:before {  
+  content: "We're sorry, the image below is broken :(";
+  display: block;
+  margin-bottom: 10px;
+}
+
+img:after {  
+  content: "(url: " attr(src) ")";
+  display: block;
+  font-size: 12px;
+}
+```
 
 ## Contribution
 
