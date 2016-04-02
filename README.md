@@ -146,3 +146,12 @@ As everyone know that the `calc` property of CSS3 is a great property. We can us
 ### Use CSS to avoid blink
 
 ### Use CSS to make style broken images
+
+## Contribution
+
+- Fork the repo to your own account
+- Make a new branch to add your advice to css tips
+- Make a pull request
+
+## License
+Release under the [MIT License](https://github.com/Erichain/Great-CSS-Tips-You-Should-Know/blob/master/LICENSE).
