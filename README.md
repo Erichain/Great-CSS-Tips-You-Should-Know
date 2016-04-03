@@ -37,12 +37,12 @@ body {
 
 If this method doesn't fit your needs--if you want to center an element both vertically and horizontally, you should check out my another repository: [css-center-complete](https://github.com/Erichain/css-center-complete).
 
-### Use CSS to make a arrow
+### Use CSS to make an arrow
 
 So, how to use css to get a shape? Such as an arrow or a caret we will use frequently. just as following:
 
 ```css
-// a down-caret 
+/* a down-caret */
 .caret {
 	display: inline-block;
 	width: 0;
@@ -50,7 +50,7 @@ So, how to use css to get a shape? Such as an arrow or a caret we will use frequ
 
 	vertical-align: middle;
 	
-	// if need a up-caret, change the border-top to border-bottom
+	/* if need a up-caret, change the border-top to border-bottom */
 	border-top: 20px solid;
 	border-right: 20px solid transparent;
 	border-left: 20px solid transparent;
@@ -83,7 +83,7 @@ body {
 	&:after {
 		display: block;
 		content: '';
-		height: 200px; // the height must be equal to the height of the footer
+		height: 200px; /* the height must be equal to the height of the footer */
 	}
 }
 
@@ -125,7 +125,7 @@ As everyone know that the `calc` property of CSS3 is a great property. We can us
 
 ```css
 .container {
-    height: 100vh;  // use the vh to set the parent element's height to 100%
+    height: 100vh;  /* use the vh to set the parent element's height to 100% */
 }
 
 .content {
@@ -198,7 +198,7 @@ As you know, when calculating the height of a BFC, floated element's height will
     width: 800px;
     padding: 20px;
     border: 1px solid #aaaaaa;
-    overflow: hidden; // or set to auto
+    overflow: hidden; /* or set to auto */
 }
 ```
 
@@ -212,7 +212,7 @@ So, how to deal with it? The solution is easy:
 
 ```css
 .container {
-    font-size: 0; // yes, just use this expression
+    font-size: 0; /* yes, just use this expression */
 }
 ```
 
