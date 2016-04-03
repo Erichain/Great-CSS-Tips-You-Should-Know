@@ -137,6 +137,56 @@ As everyone know that the `calc` property of CSS3 is a great property. We can us
 
 ### Use CSS to set a full page background image
 
+Set a full page image is so common for the website nowadays.
+
+There are two ways to figure it out.
+
+**Method One, set a full page background image**
+
+```css
+html {
+    background: url('the/path/to/your/image') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+```
+
+**Method two, set a full page image width img tag**
+
+To make it work, you should put the img inside a div wrapper.
+
+```html
+<div class="bg">
+	<img src="the/path/to/your/image" alt="">
+</div>
+```
+
+```css
+.bg {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+
+	width: 200%;
+	height: 200%;
+}
+
+.bg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+}
+```
+
 ### Use CSS's BFC to clear float
 
 To clear float, we can use the property of BFC.
