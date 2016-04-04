@@ -226,6 +226,40 @@ So, how to deal with it? The solution is easy:
 
 ### Use CSS to avoid blink
 
+As we know, if our content appear before the images loaded, we may see the blink on our pages.
+
+So, we should try to avoid this bug. Just use the padding and margin in css.
+
+```html
+<div class="container">
+	<img src="the/path/to/your/image" alt="" />
+</div>
+```
+
+What we want is to set the height of the `container` in a friendly way to avoid blink.
+
+```css
+.container {
+	positiong: relative;
+	width: 100%;
+	max-height: 500px;
+	background-color: red;
+	
+	/* avoid the margin folding */
+	overflow: hidden;
+}
+
+.container:after {
+	content: '';
+	display: block;
+	margin-top: 50%; /* or set padding-top: 50%; */
+}
+```
+
+Now you may notice that we haven't set the height of our container, but the height is there. Yeah, it's so awesome.
+
+We can use this method to render our pages before the images loaded.
+
 ### Use CSS to make style broken images
 
 Make broken images more aesthetically-pleasing with a little bit of CSS:
