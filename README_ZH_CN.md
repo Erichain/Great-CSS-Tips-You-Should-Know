@@ -201,12 +201,6 @@ html {
 
 ### 使用CSS来去除display为inline-block的li之间的间隙
 
-When we make a navigation with ul horizontally, we often set the `display` property of the `li` element to `inline-block`.
-
-But, a problem will appear that there are some spaces you don't know between every two lis.
-
-So, how to deal with it? The solution is easy, just set the `font-size` of the `ul` to 0, and then set the `font-size` you want to the `li`:
-
 当制作一个横向列表的时候, 我们一般设置`li`的`display`属性为`inline-block`
 
 但是, 这样就有一个问题就是每两个`li`之间总是会有你不知道是什么的间隙
@@ -239,7 +233,6 @@ ul li {
 
 ### 使用CSS来避免闪烁
 
-As we know, if our content appear before the images loaded, we may see the blink on our pages.
 如果我们的内容在图片加载好之前渲染好的话, 我们可能会看到包含块被撑开的一个过程, 这个过程就叫做闪烁
 
 所以,我们应该尽量避免这种现象, 通过`margin/padding`来实现
@@ -249,8 +242,6 @@ As we know, if our content appear before the images loaded, we may see the blink
 	<img src="the/path/to/your/image" alt="" />
 </div>
 ```
-
-What we want is to set the height of the `container` in a friendly way to avoid blink.
 
 ```css
 .container {
