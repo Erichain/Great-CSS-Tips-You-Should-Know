@@ -1,6 +1,10 @@
 # Great-CSS-Tips-You-Should-Know
 A useful CSS tips collection for everyone to use CSS more efficiently.
 
+## Translation
+
+[简体中文](https://github.com/Erichain/Great-CSS-Tips-You-Should-Know/blob/master/README_ZH_CN.md)
+
 ## Contents
 
 - [Use CSS to center everything vertically](#use-css-to-center-everything-vertically)
@@ -11,7 +15,7 @@ A useful CSS tips collection for everyone to use CSS more efficiently.
 - [Use CSS to define the height of an element by calculation](#use-css-to-define-the-height-of-an-element-by-calculation)
 - [Use CSS to set a full page background image](#use-css-to-set-a-full-page-background-image)
 - [Use CSS's BFC to clear float](#use-css's-bfc-toclear-float)
-- [Use CSS to set the width of a div equal to the image](#use-css-to-set-the-width-of-a-div-equal-to-the-image)
+- [Use CSS to clear the spaces between the li with inline-block property](#use-css-to-clear-the-spaces-between-the-li-with-inline-block-property)
 - [Use CSS to preload images](#use-css-to-preload-images)
 - [Use CSS to avoid blink](#use-css-to-avoid-blink)
 - [Use CSS to make style broken images](#use-css-to-make-style-broken-images)
@@ -202,17 +206,29 @@ As you know, when calculating the height of a BFC, floated element's height will
 }
 ```
 
-### Use CSS to set the width of a div equal to the image
+### Use CSS to clear the spaces between the li with inline-block property
 
-If we want to add an image inside a div, we just write img tag inside a div tag.
+When we make a navigation with ul horizontally, we often set the `display` property of the `li` element to `inline-block`.
 
-However, there is a problem that there is some space between the div's border and the image's border.
+But, a problem will appear that there are some spaces you don't know between every two lis.
 
-So, how to deal with it? The solution is easy:
+So, how to deal with it? The solution is easy, just set the `font-size` of the `ul` to 0, and then set the `font-size` you want to the `li`:
 
 ```css
-.container {
+ul {
     font-size: 0; /* yes, just use this expression */
+    
+    /* according to every different situation */
+    letter-spacing: -1px;
+    word-spacing: -1px;
+}
+
+ul li {
+    font-size: 16px; /* just set what you want */
+    
+    /* set them to normal */
+    letter-spacing: normal;
+    word-spacing: normal;
 }
 ```
 
