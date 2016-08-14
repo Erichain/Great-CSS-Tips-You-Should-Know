@@ -1,7 +1,7 @@
 # Great-CSS-Tips-You-Should-Know
 A useful CSS tips collection for everyone to use CSS more efficiently.
 
-## Translation
+## Language
 
 [简体中文](https://github.com/Erichain/Great-CSS-Tips-You-Should-Know/blob/master/README_ZH_CN.md)
 
